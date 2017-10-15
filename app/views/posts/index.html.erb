@@ -1,6 +1,9 @@
 <h1>Blog Posts</h1>
 <% @posts.each do |post| %>
-  <h3><%= post.title %></h3>
+<div class="jumbotron">
+
+  <h3><%= link_to post.title, post_path(post) %></h3>
   <p><%= post.body %></p>
 
+</div>
 <% end %>
