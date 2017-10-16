@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-header">
+    Comments
+  </div>
+  <% @post.comments.each do |comment| %>
+  <div class="card-body bg-light">
+      <p><strong><%= comment.username %></strong>: <%= comment.body %> <%= link_to '[X]', [comment.post, comment], method: :Delete, data: { confirm: 'Are you sure?' } %></p>
+
+  </div>
+  <% end %>
+</div>

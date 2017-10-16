@@ -1,0 +1,13 @@
+<h3>Add Comment</h3>
+<%= form_for [@post, @post.comments.build] do |f| %>
+
+<p>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: :username, class: 'form-control' %>
+</p>
+<%= f.label :body %>
+<%= f.text_area :body, placeholder: :body, class: 'form-control' %>
+</p>
+<p> <%= f.submit class: 'btn btn-primary' %> </p>
+
+<% end %>
